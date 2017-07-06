@@ -1,0 +1,9 @@
+
+echo "compile the driver"
+gcc -Wall -c Doptab.c
+echo "compile the optab" 
+gcc -Wall -c optab.c
+echo  "echo "Compile the driver to tlexer""
+gcc -Wall -o toptab Doptab.c optab.c keytoktab.c
+echo "test the optab"
+./toptab > Doptab.out

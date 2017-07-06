@@ -1,0 +1,8 @@
+echo "compile the driver"
+gcc -Wall -c Dsymtab.c
+echo "compile the symtab" 
+gcc -Wall -c symtab.c 
+echo "Integratge driver with symtab.c"
+gcc -Wall -o tsymtab Dsymtab.c symtab.c keytoktab.c
+echo "test the symtab"
+./tsymtab > Dsymtab.out 

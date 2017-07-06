@@ -1,0 +1,17 @@
+echo "Building driver.c"
+gcc -Wall -c driver.c 
+echo "Building parser.c"
+gcc -Wall -c parser.c 
+echo "Building keytoktab.c"
+gcc -Wall -c keytoktab.c 
+echo "Bulding lexer.c"
+gcc -Wall -c lexer.c
+echo "Building symtab.c"
+gcc -Wall -c symtab.c
+echo "Bulding optab.c"
+gcc -Wall -c optab.c
+
+
+echo "Integrate the system and test"
+gcc -Wall -o parser driver.c parser.c keytoktab.c lexer.c symtab.c optab.c
+./parser < sem4.pas > DriverV5.out --- test the parser 

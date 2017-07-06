@@ -1,0 +1,10 @@
+echo "compile the driver"
+gcc -Wall -c Dkeytoktab.c
+echo "compile the keytoktab" 
+
+gcc -Wall -c keytoktab.c
+echo "Integrate for test"
+gcc -Wall -o tkeytoktab Dkeytoktab.c keytoktab.c
+echo "test the keytoktab"
+./tkeytoktab > Dtoktab.out 
+echo "test has finnished"

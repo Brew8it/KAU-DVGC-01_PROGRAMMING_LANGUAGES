@@ -1,0 +1,10 @@
+echo "compile the driver"
+gcc -Wall -c Dlexer.c
+echo "compile the lexer" 
+gcc -Wall -c lexer.c
+
+echo "Compile the driver to tlexer"
+gcc -Wall -o tlexer Dlexer.c lexer.c keytoktab.c
+echo "test the lexer"
+./tlexer < testok1.pas > Dlexer.out
+echo "test has finnished"
